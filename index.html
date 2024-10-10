@@ -5,20 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorting Visualiser</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Sorting Visualiser</h1>
-    <div id="container"></div>
+    <header>
+        <div id="header">
 
-    <hr>
+            <div>
+                <a href="index.html" id="Sorting_Visualiser">Sorting Visualiser</a>
+            </div>
+            <div class="controls">
+                <button id="generate-array" onClick="init()">Generate new Array</button>
+            </div>
+            <div class="slider-group">
+                <label for="speedRange">Speed:</label>
+                <input type="range" id="speedRange" min="1" max="100" value="50" step="1" oninput="updateSpeed(this.value)">
+                <label for="barCountRange">Number of Bars:</label>
+                <input type="range" id="barCountRange" min="5" max="200" value="100" step="1" oninput="updateBarCount(this.value)">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="container"></div>
+        <hr>
+        <div class="controls">
+            <button id="bubble-sort" onClick="bubbleSortPlay()">Bubble Sort</button>
+            <button id="selection-sort" onClick="selectionSortPlay()">Selection Sort</button>
+            <button id="insertion-sort" onClick="insertionSortPlay()">Insertion Sort</button>
+            <button id="quick-sort" onClick="quickSortPlay(); showCode('quickSort')">Quick Sort</button>
+            <button id="merge-sort" onClick="mergeSortPlay(); showCode('mergeSort')">Merge Sort</button>
 
-    <div>
-        <button onClick="init()">init</button>
-        <button onClick="play()">play</button>
-    </div>
-    
-    </hr>
-
+        </div>
+        <div id="code-display" style="display: none; margin-top: 20px;">
+            <pre id="java-code" style="background-color: #f4f4f4; padding: 10px; border-radius: 5px;"></pre>
+            <button id="copy-code" style="margin-top: 10px;" onclick="copyCode()">Copy Code</button>
+        </div>
+    </main>
+    <script defer src="script.js"></script>
 </body>
 </html>
