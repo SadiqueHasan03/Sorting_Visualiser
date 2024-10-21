@@ -1,0 +1,142 @@
+#container{
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bar {
+    width: 20px;
+    background-color: rgb(121, 129, 146);
+    margin: 1px;
+}
+
+/* header {
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+} */
+
+ul{
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+}
+
+li{
+    flex-direction: column;
+}
+
+#Sorting_Visualiser{
+    text-decoration: none;
+    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container {
+    width: 80%;
+    height: 400px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer; 
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, opacity 0.3s ease; 
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+.controls button:disabled {
+    cursor: not-allowed; 
+    opacity: 0.5; 
+   }
+
+.slider-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input[type="range"] {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+
+ .bar {
+    display: inline-block;
+    position: relative; 
+    transition: width 0.2s ease;  
+} 
+
+.bar:hover {
+    background-color: #FF5722;
+}
+
+.height-label {
+    position: absolute;
+    top: -25px;  
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333; 
+    color: white;  
+    padding: 5px 8px; 
+    font-size: 14px;  
+    font-weight: bold; 
+    border-radius: 4px;  
+    pointer-events: none;  
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);  
+    white-space: nowrap;  
+    z-index: 10; 
+    transition: opacity 0.2s ease-in-out; 
+    opacity: 0;  
+}
+
+
+.bar:hover .height-label {
+    opacity: 1;
+    margin-bottom: 15px;
+}
+
+
+.bar:hover {
+    background-color: #4a09fd;  
+    width: 10px;
+}
+
+div{
+    flex-direction: row;
+}

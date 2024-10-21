@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./icon/SortIcon.jpg" type="image/x-icon">
+    <title>Sorting Visualiser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+            <ul>
+                <li>
+                    <a href="index.html" id="Sorting_Visualiser">Sorting Visualiser</a>
+                </li>
+                <li>
+                    <button id="generate-array" class="controls" onClick="init()">Generate new Array</button>
+                </li>
+                <li>
+                    <label for="speedRange" class="slider-group">Speed:</label>
+                </li>
+
+                <li>
+                    <input type="range" class="slider-group" id="speedRange" min="1" max="100" value="50" step="1" oninput="updateSpeed(this.value)">
+
+                </li>
+                <li>
+                    <label for="barCountRange" class="slider-group">Number of Bars:</label>
+                </li>
+                <li>
+                    <input type="range" id="barCountRange" class="slider-group" min="5" max="200" value="100" step="1" oninput="updateBarCount(this.value)">
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div id="container"></div>
+        <hr>
+        <div class="controls">
+            <button id="bubble-sort" onClick="bubbleSortPlay()">Bubble Sort</button>
+            <button id="selection-sort" onClick="selectionSortPlay()">Selection Sort</button>
+            <button id="insertion-sort" onClick="insertionSortPlay()">Insertion Sort</button>
+            <button id="quick-sort" onClick="quickSortPlay(); showCode('quickSort')">Quick Sort</button>
+            <button id="merge-sort" onClick="mergeSortPlay(); showCode('mergeSort')">Merge Sort</button>
+
+        </div>
+        <div id="code-display" style="display: none; margin-top: 20px;">
+            <pre id="java-code" style="background-color: #f4f4f4; padding: 10px; border-radius: 5px;"></pre>
+            <button id="copy-code" style="margin-top: 10px;" onclick="copyCode()">Copy Code</button>
+        </div>
+    </main>
+    <script defer src="script.js"></script>
+</body>
+</html>
