@@ -1,4 +1,4 @@
-let n = 50;
+let n = 100;
 const array = [];
 
 let speed = 50;  // Default speed
@@ -12,7 +12,7 @@ function updateBarCount(value) {
     n = value;  // Update the number of bars
     init();  // Reinitialize the bars with the new count
 
-    const containerWidth = 800;  // Adjust based on your container's width
+    const containerWidth = 1200;  // Adjust based on your container's width
     const barMargin = 1;  // Margin of each bar
     const totalMargins = (n - 1) * barMargin;  // Total margins for all bars
 
