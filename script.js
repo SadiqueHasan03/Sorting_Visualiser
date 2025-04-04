@@ -1,4 +1,4 @@
-let n = 100;
+let n = 50;
 const array = [];
 
 let speed = 50;  // Default speed
